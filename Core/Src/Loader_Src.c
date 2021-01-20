@@ -2,7 +2,7 @@
 #include "main.h"
 #include "spi.h"
 #include "gpio.h"
-#include "stm32_spi_flash.h"
+#include "../SST26VF0xxB_SPI/SST26.h"
 
 #define LOADER_OK   0x1
 #define LOADER_FAIL 0x0

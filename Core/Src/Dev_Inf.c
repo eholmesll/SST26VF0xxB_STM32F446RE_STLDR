@@ -3,7 +3,7 @@
  *
  */
 #include "Dev_Inf.h"
-#include "stm32_spi_flash.h"
+#include "../SST26VF0xxB_SPI/SST26.h"
 
 /* This structure contains information used by ST-LINK Utility to program and erase the device */
 #if defined (__ICCARM__)

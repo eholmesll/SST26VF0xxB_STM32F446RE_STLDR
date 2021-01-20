@@ -28,7 +28,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <string.h>
-#include "stm32_spi_flash.h"
+#include "SST26.h"
+//#include "../SST26VF0xxB_SPI/SST26.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
