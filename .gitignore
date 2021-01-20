@@ -3,3 +3,4 @@ Debug/
 Release/
 ExtLoader_Debug/
 *.stldr
+.cproject
