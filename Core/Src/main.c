@@ -118,11 +118,27 @@ int main(void)
   /*
    * In this part the flash management primitives is verified
    */
-  /* 1 - Verify that the identifier is correctly read */
+  /* 1 - Verify that the identifier is correctly read
   if(sFLASH_MX25L6433F_ID != sFLASH_ReadID())
   {
     Error_Handler();
-  }
+  } */
+
+
+
+  if (!sFLASH_ReadID()) while(1);
+
+
+	uint8_t rxData[20];
+
+
+   sFLASH_ReadBlockProtection(rxData);
+
+   sFLASH_GlobalBlockProtectionUnlock();
+
+   sFLASH_ReadBlockProtection(rxData);
+
+
 
   /* 2 - determines how many sectors are needed to write the test image */
   sectorsNeeded = sizeof(image_test) / sFLASH_SPI_SECTOR_SIZE;
@@ -241,7 +257,7 @@ void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
-
+	while(1);
   /* USER CODE END Error_Handler_Debug */
 }
 
